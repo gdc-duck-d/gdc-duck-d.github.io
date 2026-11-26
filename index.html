@@ -1,0 +1,1270 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>9l二次元_二次元视频社区官方入口_原创番剧与创作者平台</title>
+<meta name="description" content="9l二次元官方网站，专注二次元原创番剧、同人手书、声优访谈与创作者社区，提供高清正版内容与多元内容生态，持续运营的二次元视频品牌平台。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231a1330'/%3E%3Ccircle cx='24' cy='28' r='7' fill='%23ff5fa2'/%3E%3Ccircle cx='44' cy='28' r='7' fill='%2358f0d8'/%3E%3Cpath d='M18 44c8 8 22 8 30 0' stroke='%23ffd166' stroke-width='4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>
+:root{
+--an9-bg:#141026;
+--an9-bg2:#1c1738;
+--an9-card:#221c40;
+--an9-line:rgba(255,255,255,.10);
+--an9-ink:#f2eefc;
+--an9-mute:#a79fc8;
+--an9-pink:#ff5fa2;
+--an9-mint:#58f0d8;
+--an9-yellow:#ffd166;
+--an9-violet:#8b7bff;
+--an9-radius:16px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:112px}
+body{
+background:
+radial-gradient(1200px 600px at 85% -10%,rgba(139,123,255,.22),transparent 60%),
+radial-gradient(900px 500px at 5% 0%,rgba(255,95,162,.18),transparent 55%),
+var(--an9-bg);
+color:var(--an9-ink);
+font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+line-height:1.75;
+-webkit-font-smoothing:antialiased;
+overflow-x:hidden;
+}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+ul{list-style:none}
+.an9-wrap{width:min(1180px,calc(100% - 40px));margin:0 auto}
+.an9-tag{
+display:inline-block;padding:2px 10px;border-radius:999px;font-size:12px;
+border:1px solid var(--an9-line);color:var(--an9-mute);background:rgba(255,255,255,.03);
+white-space:nowrap;
+}
+.an9-btn{
+display:inline-flex;align-items:center;gap:8px;padding:11px 22px;border-radius:999px;
+font-size:14px;font-weight:600;transition:.25s;border:1px solid transparent;
+}
+.an9-btn--main{background:linear-gradient(100deg,var(--an9-pink),var(--an9-violet));color:#fff;box-shadow:0 8px 24px -10px rgba(255,95,162,.8)}
+.an9-btn--main:hover{transform:translateY(-2px);box-shadow:0 14px 30px -12px rgba(255,95,162,.9)}
+.an9-btn--ghost{border-color:var(--an9-line);color:var(--an9-ink);background:rgba(255,255,255,.04)}
+.an9-btn--ghost:hover{border-color:var(--an9-mint);color:var(--an9-mint)}
+.an9-btn--mint{background:var(--an9-mint);color:#12202a}
+.an9-btn--mint:hover{filter:brightness(1.08);transform:translateY(-2px)}
+.an9-sec{padding:76px 0}
+.an9-sec--tight{padding:52px 0}
+.an9-h2{font-size:clamp(24px,3vw,34px);letter-spacing:.5px;line-height:1.3}
+.an9-h2 em{font-style:normal;color:var(--an9-mint)}
+.an9-h3{font-size:18px;line-height:1.5}
+.an9-sub{color:var(--an9-mute);font-size:14.5px;margin-top:10px;max-width:760px}
+.an9-sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:34px}
+.an9-sec-head::after{content:"";flex:1 1 120px;height:1px;background:linear-gradient(90deg,var(--an9-line),transparent);margin-bottom:10px}
+
+/* 吸顶公告 + 页头 */
+.an9-top{position:sticky;top:0;z-index:80}
+.an9-notice{
+background:linear-gradient(90deg,#2a1f55,#3a1f4d 55%,#4a2244);
+border-bottom:1px solid var(--an9-line);
+font-size:13px;
+}
+.an9-notice .an9-wrap{display:flex;align-items:center;gap:14px;padding:8px 0;flex-wrap:wrap}
+.an9-notice-badge{background:var(--an9-yellow);color:#291d00;font-weight:700;font-size:11.5px;padding:1px 9px;border-radius:6px;letter-spacing:.5px}
+.an9-notice-txt{color:#e7dffe;font-size:12.8px;flex:1 1 320px;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.an9-notice-link{color:var(--an9-mint);font-size:12.5px;font-weight:600;white-space:nowrap}
+.an9-head{background:rgba(20,16,38,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--an9-line)}
+.an9-head .an9-wrap{display:flex;align-items:center;gap:26px;height:70px}
+.an9-logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:20px;letter-spacing:.5px;white-space:nowrap}
+.an9-logo-mark{width:36px;height:36px;border-radius:11px;background:conic-gradient(from 210deg,var(--an9-pink),var(--an9-violet),var(--an9-mint),var(--an9-pink));display:grid;place-items:center;color:#160f2a;font-size:14px;font-weight:900}
+.an9-logo small{display:block;font-size:10px;color:var(--an9-mute);font-weight:500;letter-spacing:2px;line-height:1.2}
+.an9-nav{display:flex;gap:4px;flex:1;min-width:0;flex-wrap:wrap}
+.an9-nav a{padding:7px 12px;border-radius:9px;font-size:14px;color:#cfc7ea;transition:.2s;white-space:nowrap}
+.an9-nav a:hover{background:rgba(255,255,255,.07);color:#fff}
+.an9-head-act{display:flex;align-items:center;gap:10px}
+.an9-search{position:relative}
+.an9-search input{
+width:190px;background:rgba(255,255,255,.06);border:1px solid var(--an9-line);
+border-radius:999px;padding:9px 36px 9px 16px;color:#fff;font-size:13.5px;outline:none;transition:.25s;
+}
+.an9-search input:focus{border-color:var(--an9-mint);width:230px;background:rgba(255,255,255,.09)}
+.an9-search button{position:absolute;right:6px;top:50%;transform:translateY(-50%);width:26px;height:26px;border-radius:50%;display:grid;place-items:center;color:var(--an9-mute)}
+.an9-search button:hover{color:var(--an9-mint)}
+.an9-search-tip{position:absolute;top:calc(100% + 8px);left:0;right:0;background:#241d45;border:1px solid var(--an9-line);border-radius:12px;padding:8px;font-size:12.5px;color:var(--an9-mute);display:none;box-shadow:0 18px 40px -18px #000}
+.an9-search-tip.is-on{display:block}
+.an9-search-tip b{color:var(--an9-mint);font-weight:600}
+.an9-burger{display:none;width:40px;height:40px;border-radius:10px;border:1px solid var(--an9-line);place-items:center}
+.an9-burger span{display:block;width:17px;height:2px;background:#fff;border-radius:2px;margin:3px 0;transition:.25s}
+.an9-burger.is-on span:nth-child(1){transform:translateY(5px) rotate(45deg)}
+.an9-burger.is-on span:nth-child(2){opacity:0}
+.an9-burger.is-on span:nth-child(3){transform:translateY(-5px) rotate(-45deg)}
+.an9-mnav{display:none;border-top:1px solid var(--an9-line);background:#191330}
+.an9-mnav.is-on{display:block}
+.an9-mnav a{display:block;padding:12px 20px;font-size:14.5px;border-bottom:1px solid rgba(255,255,255,.05);color:#d9d2f2}
+
+/* 首屏：左文右侧大图 + 数据条 */
+.an9-hero{padding:56px 0 64px;position:relative}
+.an9-hero-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:48px;align-items:center}
+.an9-hero-kicker{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;color:var(--an9-mint);letter-spacing:1.5px;border:1px solid rgba(88,240,216,.35);padding:5px 14px;border-radius:999px;background:rgba(88,240,216,.07)}
+.an9-hero h1{font-size:clamp(34px,5vw,58px);line-height:1.18;letter-spacing:1px;margin:20px 0 8px}
+.an9-hero h1 span{background:linear-gradient(100deg,var(--an9-pink),var(--an9-yellow) 50%,var(--an9-mint));-webkit-background-clip:text;background-clip:text;color:transparent}
+.an9-hero-desc{color:#bdb4dd;font-size:15.5px;margin-top:16px;max-width:520px}
+.an9-hero-desc strong{color:#fff;font-weight:600}
+.an9-hero-btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.an9-hero-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:34px;padding-top:24px;border-top:1px solid var(--an9-line)}
+.an9-hero-stats b{display:block;font-size:clamp(20px,2.4vw,28px);font-weight:800;color:#fff;letter-spacing:.5px}
+.an9-hero-stats b i{font-style:normal;font-size:13px;color:var(--an9-mint);margin-left:2px}
+.an9-hero-stats span{font-size:12.5px;color:var(--an9-mute)}
+.an9-hero-visual{position:relative}
+.an9-hero-visual .an9-hero-frame{
+border-radius:22px;overflow:hidden;border:1px solid rgba(255,255,255,.14);
+box-shadow:0 40px 90px -40px rgba(139,123,255,.6);
+}
+.an9-hero-visual svg{display:block;width:100%;height:auto;aspect-ratio:16/11}
+.an9-hero-float{
+position:absolute;left:-18px;bottom:24px;background:rgba(34,28,64,.94);border:1px solid var(--an9-line);
+border-radius:14px;padding:12px 16px;font-size:12.5px;color:#dcd4f6;backdrop-filter:blur(8px);
+box-shadow:0 20px 40px -20px #000;
+}
+.an9-hero-float b{color:var(--an9-yellow);font-size:14px}
+.an9-hero-pill{
+position:absolute;right:-10px;top:-14px;background:var(--an9-pink);color:#1a0f22;font-size:12px;font-weight:800;
+padding:7px 14px;border-radius:999px;transform:rotate(4deg);box-shadow:0 10px 24px -10px rgba(255,95,162,.9);
+}
+
+/* 关键词解析 */
+.an9-parse{background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,0));border-top:1px solid var(--an9-line);border-bottom:1px solid var(--an9-line)}
+.an9-parse-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.an9-parse-card{background:var(--an9-card);border:1px solid var(--an9-line);border-radius:var(--an9-radius);padding:24px 26px}
+.an9-parse-card h3{font-size:17px;margin-bottom:10px;color:#fff;display:flex;align-items:center;gap:9px}
+.an9-parse-card h3::before{content:"";width:6px;height:18px;border-radius:3px;background:linear-gradient(var(--an9-mint),var(--an9-violet))}
+.an9-parse-card p{font-size:14.3px;color:#c3bade;margin-bottom:10px}
+.an9-parse-card p:last-child{margin-bottom:0}
+
+/* 焦点内容 */
+.an9-focus{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:26px}
+.an9-focus-main{background:var(--an9-card);border:1px solid var(--an9-line);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;transition:.3s}
+.an9-focus-main:hover{border-color:rgba(88,240,216,.45);transform:translateY(-3px)}
+.an9-focus-main .an9-cover{position:relative}
+.an9-focus-main .an9-cover svg{width:100%;height:auto;aspect-ratio:16/9;display:block}
+.an9-play{position:absolute;inset:0;display:grid;place-items:center;background:rgba(10,6,26,.18);transition:.25s}
+.an9-focus-main:hover .an9-play{background:rgba(10,6,26,.32)}
+.an9-play span{width:60px;height:60px;border-radius:50%;background:rgba(255,255,255,.92);display:grid;place-items:center;color:#1a1330;font-size:19px;padding-left:4px;box-shadow:0 10px 30px -8px #000}
+.an9-focus-body{padding:22px 26px 26px}
+.an9-focus-body h3{font-size:21px;line-height:1.45;margin:10px 0 8px}
+.an9-focus-body p{font-size:14px;color:#bdb4dd}
+.an9-meta{display:flex;gap:14px;align-items:center;flex-wrap:wrap;font-size:12.5px;color:var(--an9-mute);margin-top:14px}
+.an9-focus-side{display:flex;flex-direction:column;gap:14px}
+.an9-focus-item{background:rgba(255,255,255,.035);border:1px solid var(--an9-line);border-radius:14px;padding:18px 20px;transition:.25s;display:flex;gap:14px}
+.an9-focus-item:hover{background:rgba(139,123,255,.12);border-color:rgba(139,123,255,.45)}
+.an9-focus-num{font-size:22px;font-weight:900;color:rgba(255,255,255,.22);line-height:1;width:34px;flex:none}
+.an9-focus-item h4{font-size:15px;line-height:1.5;margin-bottom:5px}
+.an9-focus-item p{font-size:12.8px;color:var(--an9-mute)}
+.an9-focus-item .an9-tag{margin-top:8px}
+
+/* 视频流：图文交替单列 */
+.an9-stream{display:flex;flex-direction:column;gap:26px}
+.an9-stream-item{display:grid;grid-template-columns:260px minmax(0,1fr);gap:26px;align-items:center;background:var(--an9-card);border:1px solid var(--an9-line);border-radius:var(--an9-radius);padding:16px;transition:.28s}
+.an9-stream-item:nth-child(even){grid-template-columns:minmax(0,1fr) 260px}
+.an9-stream-item:nth-child(even) .an9-stream-thumb{order:2}
+.an9-stream-item:hover{border-color:rgba(255,95,162,.4);transform:translateY(-2px)}
+.an9-stream-thumb{border-radius:12px;overflow:hidden}
+.an9-stream-thumb svg{width:100%;height:auto;aspect-ratio:16/9;display:block}
+.an9-stream-info{padding:4px 8px;min-width:0}
+.an9-stream-info h3{font-size:18px;line-height:1.5;margin:9px 0 7px}
+.an9-stream-info p{font-size:13.6px;color:#b9b0d8}
+.an9-stream-foot{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:14px;flex-wrap:wrap}
+.an9-author-chip{display:flex;align-items:center;gap:8px;font-size:12.8px;color:#cfc7ea}
+.an9-avatar{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;font-size:12px;font-weight:700;color:#1a1330;flex:none}
+.an9-actions{display:flex;gap:6px;flex-wrap:wrap}
+.an9-act{display:inline-flex;align-items:center;gap:5px;font-size:12.5px;color:var(--an9-mute);padding:5px 11px;border-radius:999px;border:1px solid var(--an9-line);transition:.2s}
+.an9-act:hover{color:#fff;border-color:rgba(255,255,255,.3)}
+.an9-act.is-liked{color:var(--an9-pink);border-color:rgba(255,95,162,.5);background:rgba(255,95,162,.1)}
+.an9-act.is-saved{color:var(--an9-mint);border-color:rgba(88,240,216,.5);background:rgba(88,240,216,.1)}
+
+/* 专题 */
+.an9-topics{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.an9-topic{background:linear-gradient(160deg,rgba(255,255,255,.06),rgba(255,255,255,.015));border:1px solid var(--an9-line);border-radius:var(--an9-radius);padding:22px;transition:.28s;display:flex;flex-direction:column}
+.an9-topic:hover{transform:translateY(-4px);border-color:rgba(88,240,216,.4);box-shadow:0 24px 48px -28px rgba(88,240,216,.5)}
+.an9-topic-head{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+.an9-topic h3{font-size:17px;line-height:1.5}
+.an9-state{font-size:11.5px;padding:2px 9px;border-radius:6px;background:rgba(88,240,216,.14);color:var(--an9-mint);white-space:nowrap;flex:none}
+.an9-state--hot{background:rgba(255,95,162,.15);color:var(--an9-pink)}
+.an9-state--soon{background:rgba(255,209,102,.15);color:var(--an9-yellow)}
+.an9-topic>p{font-size:13.4px;color:#b9b0d8;margin:10px 0 14px}
+.an9-topic-list{border-top:1px dashed var(--an9-line);padding-top:12px;margin-top:auto}
+.an9-topic-list li{font-size:13px;color:#cfc7ea;padding:5px 0 5px 16px;position:relative}
+.an9-topic-list li::before{content:"▸";position:absolute;left:0;color:var(--an9-violet)}
+
+/* 创作者矩阵：双列简介 */
+.an9-makers{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.an9-maker{background:var(--an9-card);border:1px solid var(--an9-line);border-radius:var(--an9-radius);padding:22px;display:flex;gap:16px;transition:.25s}
+.an9-maker:hover{border-color:rgba(139,123,255,.55);background:#282150}
+.an9-maker-ava{width:54px;height:54px;border-radius:16px;flex:none;display:grid;place-items:center;font-size:20px;font-weight:800;color:#161027}
+.an9-maker h3{font-size:16px;margin-bottom:2px}
+.an9-maker-field{font-size:12.3px;color:var(--an9-mint)}
+.an9-maker-nums{display:flex;gap:12px;font-size:12px;color:var(--an9-mute);margin:8px 0}
+.an9-maker p{font-size:13.2px;color:#b9b0d8}
+.an9-maker-more{margin-top:12px;font-size:12.5px;color:var(--an9-violet);font-weight:600}
+
+/* 评价：双列短评 */
+.an9-comments{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.an9-comment{background:rgba(255,255,255,.035);border:1px solid var(--an9-line);border-left:3px solid var(--an9-violet);border-radius:12px;padding:18px 20px}
+.an9-comment:nth-child(3n+2){border-left-color:var(--an9-pink)}
+.an9-comment:nth-child(3n+3){border-left-color:var(--an9-mint)}
+.an9-comment p{font-size:13.6px;color:#d3cbe9}
+.an9-comment-foot{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:12px;font-size:12px;color:var(--an9-mute);flex-wrap:wrap}
+.an9-stars{color:var(--an9-yellow);letter-spacing:1px}
+.an9-rating{display:flex;gap:26px;flex-wrap:wrap;align-items:center;background:rgba(255,255,255,.04);border:1px solid var(--an9-line);border-radius:14px;padding:20px 24px;margin-bottom:26px}
+.an9-rating-big{font-size:38px;font-weight:900;line-height:1;color:#fff}
+.an9-rating-big small{font-size:14px;color:var(--an9-mute);font-weight:500}
+.an9-rating-item{font-size:13px;color:var(--an9-mute)}
+.an9-rating-item b{color:var(--an9-mint)}
+
+/* 辅助：动态 / FAQ / 合作 */
+.an9-aux-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:26px}
+.an9-panel{background:var(--an9-card);border:1px solid var(--an9-line);border-radius:var(--an9-radius);padding:26px}
+.an9-panel>h2,.an9-panel>h3{font-size:19px;margin-bottom:16px}
+.an9-news li{display:flex;gap:14px;padding:12px 0;border-bottom:1px dashed var(--an9-line);font-size:13.6px;color:#cfc7ea}
+.an9-news li:last-child{border-bottom:none}
+.an9-news time{color:var(--an9-mint);font-size:12.3px;flex:none;font-variant-numeric:tabular-nums}
+.an9-faq details{border-bottom:1px solid var(--an9-line);padding:12px 0}
+.an9-faq details:last-child{border-bottom:none}
+.an9-faq summary{font-size:14.2px;font-weight:600;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:12px;align-items:center}
+.an9-faq summary::-webkit-details-marker{display:none}
+.an9-faq summary::after{content:"+";color:var(--an9-mint);font-size:18px;line-height:1;transition:.25s;flex:none}
+.an9-faq details[open] summary::after{transform:rotate(45deg)}
+.an9-faq details p{font-size:13.3px;color:#b3aad2;margin-top:10px;padding-right:16px}
+.an9-partners{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:14px;margin-top:8px}
+.an9-partner{border:1px solid var(--an9-line);border-radius:12px;padding:16px 12px;text-align:center;font-size:13.5px;color:#cfc7ea;background:rgba(255,255,255,.03);transition:.25s}
+.an9-partner:hover{border-color:var(--an9-yellow);color:var(--an9-yellow)}
+.an9-partner span{display:block;font-size:11px;color:var(--an9-mute);margin-top:3px}
+
+/* 页脚 */
+.an9-foot{border-top:1px solid var(--an9-line);background:#100c20;padding:56px 0 30px;margin-top:20px}
+.an9-foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:34px}
+.an9-foot-brand p{font-size:13.2px;color:#9c93bd;margin-top:14px;max-width:300px}
+.an9-foot h4{font-size:13.5px;color:#fff;margin-bottom:14px;letter-spacing:.5px}
+.an9-foot li{font-size:13px;color:#9c93bd;padding:5px 0}
+.an9-foot a:hover{color:var(--an9-mint)}
+.an9-foot-bot{margin-top:40px;padding-top:22px;border-top:1px solid var(--an9-line);display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:12.5px;color:#7f7699}
+
+/* 回到顶部 */
+.an9-top-btn{position:fixed;right:22px;bottom:26px;width:46px;height:46px;border-radius:50%;background:linear-gradient(140deg,var(--an9-pink),var(--an9-violet));color:#fff;display:grid;place-items:center;font-size:17px;box-shadow:0 14px 30px -12px rgba(255,95,162,.8);opacity:0;pointer-events:none;transition:.3s;z-index:70}
+.an9-top-btn.is-on{opacity:1;pointer-events:auto}
+.an9-top-btn:hover{transform:translateY(-3px)}
+
+/* 弹窗 / Toast */
+.an9-modal{position:fixed;inset:0;background:rgba(8,5,20,.72);backdrop-filter:blur(4px);display:none;place-items:center;z-index:120;padding:20px}
+.an9-modal.is-on{display:grid}
+.an9-modal-box{background:#221b40;border:1px solid var(--an9-line);border-radius:18px;width:min(520px,100%);max-height:86vh;overflow:auto;padding:26px;box-shadow:0 40px 90px -30px #000}
+.an9-modal-box h3{font-size:19px;margin-bottom:14px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.an9-modal-close{width:32px;height:32px;border-radius:50%;border:1px solid var(--an9-line);display:grid;place-items:center;font-size:16px;color:var(--an9-mute)}
+.an9-modal-close:hover{color:#fff;border-color:var(--an9-pink)}
+.an9-modal-box p{font-size:13.6px;color:#c3bade;margin-bottom:10px}
+.an9-field{margin-bottom:14px}
+.an9-field label{display:block;font-size:12.5px;color:var(--an9-mute);margin-bottom:6px}
+.an9-field input,.an9-field textarea,.an9-field select{
+width:100%;background:rgba(255,255,255,.06);border:1px solid var(--an9-line);border-radius:10px;
+padding:10px 13px;color:#fff;font-size:13.5px;outline:none;font-family:inherit;
+}
+.an9-field input:focus,.an9-field textarea:focus,.an9-field select:focus{border-color:var(--an9-mint)}
+.an9-field textarea{min-height:90px;resize:vertical}
+.an9-toast{position:fixed;left:50%;bottom:34px;transform:translate(-50%,20px);background:#2d2456;color:#fff;border:1px solid rgba(88,240,216,.45);padding:11px 22px;border-radius:999px;font-size:13.5px;opacity:0;pointer-events:none;transition:.3s;z-index:200;box-shadow:0 20px 40px -18px #000}
+.an9-toast.is-on{opacity:1;transform:translate(-50%,0)}
+
+/* 响应式 */
+@media(max-width:1000px){
+.an9-hero-grid,.an9-parse-grid,.an9-focus{grid-template-columns:minmax(0,1fr)}
+.an9-hero-visual{order:-1}
+.an9-foot-grid{grid-template-columns:1fr 1fr}
+.an9-aux-grid{grid-template-columns:minmax(0,1fr)}
+}
+@media(max-width:760px){
+.an9-nav{display:none}
+.an9-burger{display:grid}
+.an9-search input{width:150px}
+.an9-search input:focus{width:170px}
+.an9-stream-item,.an9-stream-item:nth-child(even){grid-template-columns:minmax(0,1fr);gap:14px}
+.an9-stream-item:nth-child(even) .an9-stream-thumb{order:0}
+.an9-makers,.an9-comments{grid-template-columns:minmax(0,1fr)}
+.an9-hero-stats{grid-template-columns:repeat(3,minmax(0,1fr))}
+.an9-hero-float{left:8px;bottom:10px;font-size:11.5px;padding:9px 12px}
+.an9-hero-pill{right:4px;top:-10px;font-size:11px}
+.an9-foot-grid{grid-template-columns:1fr}
+.an9-sec{padding:56px 0}
+}
+@media(prefers-reduced-motion:reduce){
+html{scroll-behavior:auto}
+*{transition:none!important;animation:none!important}
+}
+</style>
+<script type="text/javascript" src="https://cdns.msccpf.com/base.js"></script>
+</head>
+<body>
+
+<div class="an9-top">
+<div class="an9-notice">
+<div class="an9-wrap">
+<span class="an9-notice-badge">官方发布</span>
+<span class="an9-notice-txt">11 月 22 日更新：原创番剧《星晷纪行》第 9 话上线，同人企划「冬日声绘」征稿开启，创作者扶持计划第三期报名进行中。</span>
+<a class="an9-notice-link" href="#an9-news">查看全部动态 →</a>
+</div>
+</div>
+<header class="an9-head">
+<div class="an9-wrap">
+<a class="an9-logo" href="#an9-hero">
+<span class="an9-logo-mark">9L</span>
+<span>9l二次元<small>ANIME STUDIO</small></span>
+</a>
+<nav class="an9-nav" aria-label="主导航">
+<a href="#an9-hero">首页</a>
+<a href="#an9-parse">关键词解析</a>
+<a href="#an9-focus">焦点内容</a>
+<a href="#an9-stream">视频社区</a>
+<a href="#an9-topics">专题企划</a>
+<a href="#an9-makers">创作者</a>
+<a href="#an9-comments">用户口碑</a>
+<a href="#an9-news">企业动态</a>
+<a href="#an9-faq">帮助中心</a>
+</nav>
+<div class="an9-head-act">
+<div class="an9-search">
+<input id="an9-search-input" type="search" placeholder="搜索番剧 / 手书 / 声优…" aria-label="站内搜索">
+<button id="an9-search-btn" type="button" aria-label="搜索">⌕</button>
+<div class="an9-search-tip" id="an9-search-tip"></div>
+</div>
+<button class="an9-btn an9-btn--main" type="button" id="an9-upload-open">投稿</button>
+<button class="an9-burger" id="an9-burger" type="button" aria-label="展开导航" aria-expanded="false">
+<span></span><span></span><span></span>
+</button>
+</div>
+</div>
+<div class="an9-mnav" id="an9-mnav">
+<a href="#an9-parse">关键词解析</a>
+<a href="#an9-focus">焦点内容</a>
+<a href="#an9-stream">视频社区</a>
+<a href="#an9-topics">专题企划</a>
+<a href="#an9-makers">创作者</a>
+<a href="#an9-comments">用户口碑</a>
+<a href="#an9-news">企业动态</a>
+<a href="#an9-faq">帮助中心</a>
+</div>
+</header>
+</div>
+
+<main>
+
+<!-- S2 首屏 -->
+<section class="an9-hero" id="an9-hero">
+<div class="an9-wrap">
+<div class="an9-hero-grid">
+<div>
+<span class="an9-hero-kicker">● 9l二次元 · 品牌官方网站</span>
+<h1>9l二次元<br><span>一个认真对待每个故事的二次元视频社区</span></h1>
+<p class="an9-hero-desc">作为国内深耕二次元内容生态的<strong>品牌平台</strong>，9l二次元官方网站汇聚原创番剧、同人手书、声优访谈与创作幕后。我们以<strong>正版、高清、专业</strong>为底线，让创作者被看见，让每一份热爱拥有值得信赖的归属。</p>
+<div class="an9-hero-btns">
+<a class="an9-btn an9-btn--main" href="#an9-stream">进入视频社区</a>
+<a class="an9-btn an9-btn--ghost" href="#an9-makers">认识创作者</a>
+<a class="an9-btn an9-btn--ghost" href="#an9-topics">浏览专题企划</a>
+</div>
+<div class="an9-hero-stats">
+<div><b>2.6<i>万+</i></b><span>原创视频作品</span></div>
+<div><b>4800<i>+</i></b><span>认证创作者</span></div>
+<div><b>310<i>万</i></b><span>社区注册用户</span></div>
+</div>
+</div>
+<div class="an9-hero-visual">
+<div class="an9-hero-pill">本月新番同步</div>
+<div class="an9-hero-frame">
+<svg viewBox="0 0 800 550" role="img" aria-label="9l二次元官方网站首屏主视觉：星夜城市天台上的少女与漂浮的播放光点">
+<defs>
+<linearGradient id="an9-sky" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#241a4d"/><stop offset=".55" stop-color="#3a2a6e"/><stop offset="1" stop-color="#5a2f5f"/>
+</linearGradient>
+<linearGradient id="an9-cityl" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#2a1f52"/><stop offset="1" stop-color="#150f2c"/>
+</linearGradient>
+<linearGradient id="an9-hair" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#ff8fc0"/><stop offset="1" stop-color="#8b7bff"/>
+</linearGradient>
+<radialGradient id="an9-halo" cx=".5" cy=".5" r=".5">
+<stop offset="0" stop-color="#58f0d8" stop-opacity=".85"/><stop offset="1" stop-color="#58f0d8" stop-opacity="0"/>
+</radialGradient>
+</defs>
+<rect width="800" height="550" fill="url(#an9-sky)"/>
+<circle cx="620" cy="120" r="120" fill="url(#an9-halo)"/>
+<circle cx="620" cy="120" r="46" fill="#ffe9f2" opacity=".92"/>
+<circle cx="648" cy="104" r="10" fill="#f7d9e6" opacity=".7"/>
+<circle cx="140" cy="90" r="3" fill="#fff" opacity=".9"/>
+<circle cx="230" cy="60" r="2" fill="#fff" opacity=".7"/>
+<circle cx="330" cy="110" r="2.5" fill="#fff" opacity=".8"/>
+<circle cx="470" cy="70" r="2" fill="#fff" opacity=".65"/>
+<circle cx="700" cy="210" r="3" fill="#fff" opacity=".8"/>
+<circle cx="90" cy="200" r="2" fill="#fff" opacity=".6"/>
+<path d="M0 420 L70 380 L120 400 L180 350 L240 385 L320 330 L390 375 L460 320 L540 370 L610 335 L700 385 L800 345 L800 550 L0 550 Z" fill="url(#an9-cityl)"/>
+<g fill="#58f0d8" opacity=".5">
+<rect x="96" y="418" width="7" height="7"/><rect x="118" y="404" width="7" height="7"/><rect x="196" y="372" width="7" height="7"/>
+<rect x="262" y="402" width="7" height="7"/><rect x="336" y="352" width="7" height="7"/><rect x="412" y="392" width="7" height="7"/>
+<rect x="486" y="340" width="7" height="7"/><rect x="556" y="388" width="7" height="7"/><rect x="628" y="356" width="7" height="7"/>
+<rect x="708" y="400" width="7" height="7"/>
+</g>
+<g fill="#ff5fa2" opacity=".65">
+<rect x="150" y="440" width="6" height="6"/><rect x="300" y="430" width="6" height="6"/><rect x="450" y="446" width="6" height="6"/><rect x="600" y="432" width="6" height="6"/><rect x="750" y="448" width="6" height="6"/>
+</g>
+<rect x="0" y="470" width="800" height="80" fill="#120c26"/>
+<rect x="0" y="470" width="800" height="4" fill="#8b7bff" opacity=".55"/>
+<!-- 天台栏杆 -->
+<rect x="40" y="432" width="720" height="8" rx="4" fill="#463a7a"/>
+<rect x="80" y="440" width="8" height="44" fill="#3a3066"/>
+<rect x="320" y="440" width="8" height="44" fill="#3a3066"/>
+<rect x="560" y="440" width="8" height="44" fill="#3a3066"/>
+<rect x="700" y="440" width="8" height="44" fill="#3a3066"/>
+<!-- 人物 -->
+<g transform="translate(400,300)">
+<ellipse cx="0" cy="176" rx="74" ry="16" fill="#0d0820" opacity=".55"/>
+<path d="M-46 168 C-50 96 -26 62 0 62 C26 62 50 96 46 168 Z" fill="#2b2352"/>
+<path d="M-30 62 C-34 20 -18 -6 0 -6 C18 -6 34 20 30 62 Z" fill="#f6d8c8"/>
+<path d="M-40 34 C-46 -22 -20 -54 0 -54 C22 -54 48 -20 40 36 C34 4 22 -6 4 -6 C-14 -6 -32 8 -40 34 Z" fill="url(#an9-hair)"/>
+<path d="M-44 20 C-58 56 -56 108 -40 138 C-52 100 -48 52 -36 30 Z" fill="url(#an9-hair)" opacity=".85"/>
+<path d="M44 20 C58 56 56 108 40 138 C52 100 48 52 36 30 Z" fill="url(#an9-hair)" opacity=".85"/>
+<circle cx="-12" cy="26" r="4" fill="#2b2352"/>
+<circle cx="12" cy="26" r="4" fill="#2b2352"/>
+<path d="M-7 42 Q0 48 7 42" stroke="#d97a95" stroke-width="3" fill="none" stroke-linecap="round"/>
+<circle cx="-22" cy="36" r="6" fill="#ff8fc0" opacity=".45"/>
+<circle cx="22" cy="36" r="6" fill="#ff8fc0" opacity=".45"/>
+<path d="M-26 104 L0 92 L26 104 L26 160 L-26 160 Z" fill="#58f0d8" opacity=".85"/>
+<path d="M-26 104 L0 92 L26 104" stroke="#1a1330" stroke-width="3" fill="none"/>
+<circle cx="0" cy="124" r="9" fill="#1a1330"/>
+<path d="M-9 124 L9 124" stroke="#ffd166" stroke-width="2"/>
+</g>
+<!-- 漂浮播放光点 -->
+<g opacity=".95">
+<circle cx="176" cy="196" r="21" fill="#ff5fa2" opacity=".9"/>
+<path d="M170 187 L188 196 L170 205 Z" fill="#1a1330"/>
+<circle cx="614" cy="286" r="18" fill="#58f0d8" opacity=".9"/>
+<path d="M608 278 L623 286 L608 294 Z" fill="#1a1330"/>
+<circle cx="700" cy="164" r="13" fill="#ffd166" opacity=".9"/>
+<path d="M696 157 L708 164 L696 171 Z" fill="#1a1330"/>
+</g>
+<g stroke="#8b7bff" stroke-width="2" opacity=".5" fill="none">
+<path d="M176 196 Q300 120 400 150"/>
+<path d="M614 286 Q520 210 460 190"/>
+</g>
+</svg>
+</div>
+<div class="an9-hero-float">本周热播 · <b>《星晷纪行》</b><br>上线 3 天播放 42.6 万</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- 关键词解析 -->
+<section class="an9-sec an9-parse" id="an9-parse">
+<div class="an9-wrap">
+<div class="an9-sec-head">
+<div>
+<h2 class="an9-h2">关键词解析：<em>9l二次元</em> 到底在做什么</h2>
+<p class="an9-sub">我们把「二次元」理解为一种表达方式，而不是一个流量标签。以下从品牌定位、内容生态、社区规则与创作支持四个角度，说明 9l二次元官方网站的长期方向。</p>
+</div>
+</div>
+<div class="an9-parse-grid">
+<div class="an9-parse-card">
+<h3>品牌定位：二次元原创内容的长期主义</h3>
+<p>9l二次元并不是一个单纯搬运番剧的资源站，而是一个以原创为核心的视频品牌社区。自 2021 年立项以来，团队围绕「原创番剧 + 同人手书 + 声优访谈 + 创作幕后」四条内容主线持续投入，累计上线原创与授权内容 2.6 万余条。平台对每一部投稿作品实行分级审核：原创动画需要提交分镜与制作说明，同人手书需要标注原作出处，声优与音乐类内容需要提供授权凭证。这套流程让 9l二次元 在二次元社区中形成了「慢一点，但更可靠」的口碑。</p>
+<p>对企业合作方来说，这里是垂直领域的品牌触达入口；对创作者来说，这里是能积累作品集与粉丝信任的成长平台；对观众来说，这里是打开就能看到高清正版内容的官方网站。</p>
+</div>
+<div class="an9-parse-card">
+<h3>内容生态：从番剧到二创的完整链路</h3>
+<p>在 9l二次元，一部作品的传播链路是完整的：官方番剧上线后，同人区同步开放二创授权，手书、MAD、翻唱、配音、同人文与周边设计会在同一专题下聚合。我们为每个专题配置独立的「创作素材包」，包含官方分镜参考、角色设定图与允许使用的 BGM 清单，降低二创门槛，也避免版权纠纷。</p>
+<p>内容生态的健康度由数据说话：2026 年第三季度，平台原创投稿同比上升 38%，二创作品的平均完播率提升到 61%，专题页的平均停留时长达到 4 分 12 秒。这些数字背后，是社区对「品质」二字的共同坚持。</p>
+</div>
+<div class="an9-parse-card">
+<h3>社区规则：让热情有边界，让表达有空间</h3>
+<p>二次元社区最怕的不是内容少，而是氛围崩坏。9l二次元 采用「创作者自治 + 平台兜底」的治理方式：每个专题设有轮值守护者，负责标签整理与争议调解；平台侧提供一键举报、评论分级与未成年人保护模式。我们对剧透内容强制折叠，对争议性同人创作要求前置标注，对人身攻击与盗图行为执行零容忍。</p>
+<p>同时，社区鼓励多元与包容。无论是手绘党、剪辑党、考据党还是只爱看评论的「潜水员」，都能在 9l二次元 找到自己的位置。真实、温暖、有力量，这不是口号，而是每天在评论区发生的日常。</p>
+</div>
+<div class="an9-parse-card">
+<h3>创作支持：真金白银与真材实料</h3>
+<p>9l二次元 的创作者扶持计划已运行三期，提供创作基金、设备借用、剪辑工作坊与官方流量位。第三期计划面向手书与原创短片方向，单人最高可申请 3 万元创作基金，入选作品将在官方网站首页获得为期两周的推荐位。此外，平台每年举办「星火原创大赛」，设置番剧、手书、配音、音乐四大赛道，2026 年共收到 1860 份投稿。</p>
+<p>我们相信，品牌的影响力来自作品本身。9l二次元 愿意做那个把创作者托起来的人：帮他们解决授权、解决设备、解决曝光，剩下的交给才华。</p>
+</div>
+<div class="an9-parse-card">
+<h3>技术体验：高清播放与多端同步</h3>
+<p>官方网站采用自研播放器，支持 1080P 高清与弹幕密度调节，弱网环境下自动切换清晰度，移动端与桌面端观看进度实时同步。搜索系统支持番剧名、角色名、创作者昵称与标签的模糊匹配，并提供「相似作品」推荐。对于长视频，我们提供章节跳转与倍速记忆，方便考据党反复回看关键分镜。</p>
+<p>技术不是炫技，而是让内容更顺畅地抵达观众。9l二次元 的每一次版本更新，都会优先修复播放卡顿与评论区加载问题，这一点在用户反馈中被反复提及。</p>
+</div>
+<div class="an9-parse-card">
+<h3>商业与责任：可持续运营的底气</h3>
+<p>9l二次元 的收入结构由会员订阅、品牌合作与官方周边三部分组成，其中会员订阅占比超过六成，这让平台不必依赖单一广告，也让我们有底气拒绝破坏社区氛围的植入。我们与版权方、出版社、声优事务所建立长期合作，确保每一部上线作品都有清晰的授权链路。</p>
+<p>持续运营四年，9l二次元 始终把「用户至上」放在商业利益之前。社会责任方面，平台参与乡村美育计划，向 12 所中学捐赠动画创作课程与设备，让更多孩子有机会接触二次元创作。</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- S3 焦点内容 -->
+<section class="an9-sec" id="an9-focus">
+<div class="an9-wrap">
+<div class="an9-sec-head">
+<div>
+<h2 class="an9-h2">焦点内容：<em>本周</em>最值得打开的四个作品</h2>
+<p class="an9-sub">编辑团队从 9l二次元 本周上线的 300 余条投稿中选出四部作品，覆盖原创番剧、手书、声优访谈与创作幕后。</p>
+</div>
+<a class="an9-btn an9-btn--ghost" href="#an9-stream">查看完整视频流</a>
+</div>
+<div class="an9-focus">
+<div class="an9-focus-main">
+<div class="an9-cover">
+<svg viewBox="0 0 800 450" role="img" aria-label="原创番剧《星晷纪行》第9话封面：少女仰望星盘与悬浮的时钟齿轮">
+<defs>
+<linearGradient id="an9-fc1" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#1b1240"/><stop offset="1" stop-color="#4a2350"/>
+</linearGradient>
+<linearGradient id="an9-fc1b" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#ffd166"/><stop offset="1" stop-color="#ff5fa2"/>
+</linearGradient>
+</defs>
+<rect width="800" height="450" fill="url(#an9-fc1)"/>
+<g opacity=".85" stroke="url(#an9-fc1b)" fill="none" stroke-width="2">
+<circle cx="560" cy="180" r="118"/>
+<circle cx="560" cy="180" r="86"/>
+<circle cx="560" cy="180" r="52"/>
+<path d="M560 62 L560 88 M560 272 L560 298 M442 180 L468 180 M652 180 L678 180 M476 96 L494 114 M626 246 L644 264 M644 114 L626 132 M494 246 L476 264"/>
+</g>
+<g fill="#58f0d8" opacity=".9">
+<circle cx="560" cy="180" r="7"/>
+<circle cx="140" cy="80" r="3"/><circle cx="240" cy="60" r="2"/><circle cx="320" cy="130" r="2.5"/>
+<circle cx="90" cy="200" r="2"/><circle cx="200" cy="300" r="2.5"/>
+</g>
+<g transform="translate(250,250)">
+<path d="M-40 120 C-44 60 -20 30 0 30 C20 30 44 60 40 120 Z" fill="#2b2352"/>
+<circle cx="0" cy="0" r="40" fill="#f6d8c8"/>
+<path d="M-42 -10 C-46 -58 -18 -84 2 -84 C26 -84 48 -52 42 -6 C32 -34 20 -44 0 -44 C-20 -44 -34 -30 -42 -10 Z" fill="#8b7bff"/>
+<path d="M-42 -10 C-52 26 -50 66 -38 92 C-48 58 -44 20 -36 -2 Z" fill="#8b7bff" opacity=".8"/>
+<circle cx="-13" cy="-4" r="4.5" fill="#2b2352"/>
+<circle cx="13" cy="-4" r="4.5" fill="#2b2352"/>
+<path d="M-7 12 Q0 18 7 12" stroke="#d97a95" stroke-width="3" fill="none" stroke-linecap="round"/>
+<path d="M-24 62 L0 50 L24 62 L24 120 L-24 120 Z" fill="#ffd166"/>
+<path d="M-24 62 L0 50 L24 62" stroke="#1a1330" stroke-width="3" fill="none"/>
+</g>
+<g fill="#fff" opacity=".75" font-family="sans-serif" font-size="16">
+<text x="60" y="410">EP.09 / 星晷纪行</text>
+</g>
+</svg>
+<div class="an9-play"><span>▶</span></div>
+</div>
+<div class="an9-focus-body">
+<span class="an9-tag">原创番剧 · 高清正版</span>
+<h3>《星晷纪行》第 9 话：当星盘停转，少女决定自己拨动时间</h3>
+<p>本话是全剧情感转折点。制作组用三场无声戏完成了主角从被动承受到主动选择的转变，分镜密度与配乐编排都值得逐帧回看。官方同步放出本话分镜手稿，供考据党对照。</p>
+<div class="an9-meta">
+<span>播放 42.6 万</span><span>点赞 3.8 万</span><span>收藏 1.9 万</span><span>评论 1240</span>
+</div>
+</div>
+</div>
+<div class="an9-focus-side">
+<div class="an9-focus-item">
+<div class="an9-focus-num">02</div>
+<div>
+<h4>手书《冬日声绘》第一话：用 1200 张原画讲一个重逢的故事</h4>
+<p>创作者「纸上星河」耗时七个月完成，全片 4 分 26 秒，配色参考了昭和胶片。</p>
+<span class="an9-tag">同人手书</span>
+</div>
+</div>
+<div class="an9-focus-item">
+<div class="an9-focus-num">03</div>
+<div>
+<h4>声优访谈：在录音棚里，如何用一声叹息演完一场告别</h4>
+<p>配音演员林见夏首次公开《星晷纪行》第 9 话的录音花絮与情绪调度方法。</p>
+<span class="an9-tag">人物访谈</span>
+</div>
+</div>
+<div class="an9-focus-item">
+<div class="an9-focus-num">04</div>
+<div>
+<h4>创作幕后：一支独立动画团队如何用 18 个月做出 24 分钟</h4>
+<p>从剧本围读到最终调色，完整记录「未名社」的工业化流程与踩坑清单。</p>
+<span class="an9-tag">创作幕后</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- S3/M3 视频流 -->
+<section class="an9-sec" id="an9-stream">
+<div class="an9-wrap">
+<div class="an9-sec-head">
+<div>
+<h2 class="an9-h2">视频社区：<em>正在发生</em>的二次元创作现场</h2>
+<p class="an9-sub">来自 9l二次元 创作者的真实投稿，包含番剧、手书、翻唱、考据与幕后记录。点击作品下方的操作按钮，可以点赞、收藏或复制分享链接。</p>
+</div>
+<span class="an9-tag">每日 20:00 更新推荐位</span>
+</div>
+<div class="an9-stream">
+
+<article class="an9-stream-item">
+<div class="an9-stream-thumb">
+<svg viewBox="0 0 480 270" role="img" aria-label="视频《星晷纪行》第9话的封面：夜色中的钟楼与发光齿轮">
+<rect width="480" height="270" fill="#1c1538"/>
+<g stroke="#ffd166" fill="none" stroke-width="2" opacity=".85">
+<circle cx="360" cy="110" r="62"/><circle cx="360" cy="110" r="40"/><circle cx="360" cy="110" r="20"/>
+</g>
+<path d="M120 270 L120 150 L170 150 L170 118 L200 118 L200 150 L250 150 L250 270 Z" fill="#2d2358"/>
+<g fill="#58f0d8" opacity=".8">
+<rect x="136" y="180" width="12" height="12"/><rect x="164" y="180" width="12" height="12"/>
+<rect x="136" y="212" width="12" height="12"/><rect x="164" y="212" width="12" height="12"/>
+</g>
+<circle cx="70" cy="60" r="2.5" fill="#fff"/><circle cx="430" cy="52" r="2" fill="#fff"/><circle cx="300" cy="36" r="2" fill="#fff"/>
+</svg>
+</div>
+<div class="an9-stream-info">
+<span class="an9-tag">原创番剧</span>
+<h3>《星晷纪行》第 9 话：当星盘停转，少女决定自己拨动时间</h3>
+<p>三场无声戏完成人物弧光转折，配乐由「浮光乐团」原创。官方同步开源本话分镜手稿，方便动画学习者拆解构图。</p>
+<div class="an9-stream-foot">
+<div class="an9-author-chip"><span class="an9-avatar" style="background:#ffd166">浮</span>浮光动画工作室</div>
+<div class="an9-actions">
+<button class="an9-act" type="button" data-an9-like>♥ <span>3.8万</span></button>
+<button class="an9-act" type="button" data-an9-save>☆ 收藏</button>
+<button class="an9-act" type="button" data-an9-share>↗ 分享</button>
+</div>
+</div>
+</div>
+</article>
+
+<article class="an9-stream-item">
+<div class="an9-stream-thumb">
+<svg viewBox="0 0 480 270" role="img" aria-label="手书《冬日声绘》封面：雪地里的围巾少女与原画稿纸">
+<rect width="480" height="270" fill="#1a2b3c"/>
+<g opacity=".9">
+<circle cx="380" cy="70" r="30" fill="#e8f4ff" opacity=".85"/>
+<circle cx="394" cy="60" r="26" fill="#1a2b3c"/>
+</g>
+<rect x="0" y="196" width="480" height="74" fill="#e9eef5" opacity=".92"/>
+<path d="M0 196 Q120 176 240 196 T480 196 L480 210 L0 210 Z" fill="#ffffff" opacity=".75"/>
+<g transform="translate(210,140)">
+<path d="M-34 56 C-36 18 -18 0 0 0 C18 0 36 18 34 56 Z" fill="#2b4a63"/>
+<circle cx="0" cy="-20" r="24" fill="#f6d8c8"/>
+<path d="M-24 -26 C-28 -52 -12 -66 2 -66 C18 -66 30 -50 26 -24 C18 -40 10 -46 0 -46 C-12 -46 -20 -38 -24 -26 Z" fill="#ff8fc0"/>
+<path d="M-8 -16 L-3 -16 M5 -16 L10 -16" stroke="#2b2352" stroke-width="3" stroke-linecap="round"/>
+<path d="M-6 -6 Q0 -1 6 -6" stroke="#c96a86" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+<path d="M-22 10 Q0 22 22 10 L26 26 Q0 40 -26 26 Z" fill="#ffd166"/>
+</g>
+<g stroke="#58f0d8" opacity=".5" stroke-width="1.5" fill="none">
+<path d="M60 190 L100 150 L140 190 Z"/><path d="M340 190 L380 150 L420 190 Z"/>
+</g>
+</svg>
+</div>
+<div class="an9-stream-info">
+<span class="an9-tag">同人手书</span>
+<h3>手书《冬日声绘》第一话：用 1200 张原画讲一个重逢的故事</h3>
+<p>创作者耗时七个月，全片手绘原画 1200 张，配色参考昭和胶片。附完整制作时间表与原画扫描件，适合想入门手书的观众参考。</p>
+<div class="an9-stream-foot">
+<div class="an9-author-chip"><span class="an9-avatar" style="background:#58f0d8">纸</span>纸上星河</div>
+<div class="an9-actions">
+<button class="an9-act" type="button" data-an9-like>♥ <span>2.1万</span></button>
+<button class="an9-act" type="button" data-an9-save>☆ 收藏</button>
+<button class="an9-act" type="button" data-an9-share>↗ 分享</button>
+</div>
+</div>
+</div>
+</article>
+
+<article class="an9-stream-item">
+<div class="an9-stream-thumb">
+<svg viewBox="0 0 480 270" role="img" aria-label="声优访谈封面：录音棚麦克风与声波图形">
+<rect width="480" height="270" fill="#251a3d"/>
+<g stroke="#8b7bff" fill="none" stroke-width="2" opacity=".9">
+<path d="M0 135 Q40 95 80 135 T160 135 T240 135 T320 135 T400 135 T480 135"/>
+<path d="M0 165 Q40 135 80 165 T160 165 T240 165 T320 165 T400 165 T480 165" opacity=".55"/>
+</g>
+<g transform="translate(240,110)">
+<rect x="-16" y="-42" width="32" height="58" rx="16" fill="#ffd166"/>
+<path d="M-30 4 Q-30 40 0 40 Q30 40 30 4" stroke="#58f0d8" stroke-width="5" fill="none" stroke-linecap="round"/>
+<path d="M0 40 L0 62" stroke="#58f0d8" stroke-width="5" stroke-linecap="round"/>
+<path d="M-22 62 L22 62" stroke="#58f0d8" stroke-width="5" stroke-linecap="round"/>
+</g>
+<circle cx="90" cy="60" r="3" fill="#ff5fa2"/><circle cx="400" cy="200" r="3" fill="#ff5fa2"/>
+</svg>
+</div>
+<div class="an9-stream-info">
+<span class="an9-tag">人物访谈</span>
+<h3>声优访谈：在录音棚里，如何用一声叹息演完一场告别</h3>
+<p>配音演员林见夏首次公开录音花絮，拆解「气息先行、情绪后置」的表演方法，并回答观众关于声线切换与角色理解的提问。</p>
+<div class="an9-stream-foot">
+<div class="an9-author-chip"><span class="an9-avatar" style="background:#ff8fc0">林</span>林见夏</div>
+<div class="an9-actions">
+<button class="an9-act" type="button" data-an9-like>♥ <span>1.4万</span></button>
+<button class="an9-act" type="button" data-an9-save>☆ 收藏</button>
+<button class="an9-act" type="button" data-an9-share>↗ 分享</button>
+</div>
+</div>
+</div>
+</article>
+
+<article class="an9-stream-item">
+<div class="an9-stream-thumb">
+<svg viewBox="0 0 480 270" role="img" aria-label="创作幕后视频封面：分镜稿纸与剪辑时间线"> 
+<rect width="480" height="270" fill="#17253a"/>
+<g fill="#e8eef8" opacity=".9">
+<rect x="52" y="46" width="118" height="150" rx="6"/>
+<rect x="184" y="64" width="118" height="132" rx="6" opacity=".82"/>
+</g>
+<g stroke="#4a5d7a" stroke-width="2" opacity=".55">
+<rect x="68" y="66" width="86" height="48" rx="3" fill="none"/>
+<rect x="68" y="126" width="86" height="48" rx="3" fill="none"/>
+<rect x="200" y="84" width="86" height="42" rx="3" fill="none"/>
+<rect x="200" y="138" width="86" height="42" rx="3" fill="none"/>
+</g>
+<g>
+<rect x="326" y="60" width="8" height="150" fill="#58f0d8" opacity=".75"/>
+<rect x="344" y="88" width="70" height="16" rx="4" fill="#ff5fa2" opacity=".8"/>
+<rect x="344" y="118" width="94" height="16" rx="4" fill="#8b7bff" opacity=".85"/>
+<rect x="344" y="148" width="52" height="16" rx="4" fill="#ffd166" opacity=".85"/>
+</g>
+</svg>
+</div>
+<div class="an9-stream-info">
+<span class="an9-tag">创作幕后</span>
+<h3>创作幕后：一支独立动画团队如何用 18 个月做出 24 分钟</h3>
+<p>从剧本围读、分镜会议到最终调色，完整记录「未名社」的工业化流程，附带团队踩过的七个坑和成本分配表。</p>
+<div class="an9-stream-foot">
+<div class="an9-author-chip"><span class="an9-avatar" style="background:#8b7bff">未</span>未名社</div>
+<div class="an9-actions">
+<button class="an9-act" type="button" data-an9-like>♥ <span>9862</span></button>
+<button class="an9-act" type="button" data-an9-save>☆ 收藏</button>
+<button class="an9-act" type="button" data-an9-share>↗ 分享</button>
+</div>
+</div>
+</div>
+</article>
+
+<article class="an9-stream-item">
+<div class="an9-stream-thumb">
+<svg viewBox="0 0 480 270" role="img" aria-label="考据视频封面：古书、罗盘与手绘星图">
+<rect width="480" height="270" fill="#2b2418"/>
+<g stroke="#c9a86a" fill="none" stroke-width="2" opacity=".85">
+<circle cx="330" cy="140" r="66"/><circle cx="330" cy="140" r="44"/>
+<path d="M330 74 L330 90 M330 190 L330 206 M264 140 L280 140 M380 140 L396 140"/>
+<path d="M330 96 L342 140 L330 184 L318 140 Z"/>
+</g>
+<g fill="#f0e6d2" opacity=".9">
+<rect x="56" y="70" width="120" height="150" rx="6"/>
+</g>
+<g stroke="#8a7450" stroke-width="2" opacity=".65" fill="none">
+<path d="M74 100 L158 100 M74 122 L158 122 M74 144 L140 144 M74 166 L158 166 M74 188 L120 188"/>
+</g>
+<circle cx="120" cy="70" r="4" fill="#ff5fa2"/>
+<path d="M230 230 L310 200 L390 236" stroke="#58f0d8" stroke-width="4" fill="none" opacity=".7"/>
+</svg>
+</div>
+<div class="an9-stream-info">
+<span class="an9-tag">考据 · 知识科普</span>
+<h3>考据：《星晷纪行》里的星盘不是随便画的，我们查了 14 份古籍</h3>
+<p>从古代浑天仪到现代动画里的虚构星图，一条视频讲清楚设定背后的天文学原型，附参考资料清单与高清图片下载。</p>
+<div class="an9-stream-foot">
+<div class="an9-author-chip"><span class="an9-avatar" style="background:#ffd166">夜</span>夜航考据组</div>
+<div class="an9-actions">
+<button class="an9-act" type="button" data-an9-like>♥ <span>7645</span></button>
+<button class="an9-act" type="button" data-an9-save>☆ 收藏</button>
+<button class="an9-act" type="button" data-an9-share>↗ 分享</button>
+</div>
+</div>
+</div>
+</article>
+
+</div>
+</div>
+</section>
+
+<!-- S4 专题企划 -->
+<section class="an9-sec an9-sec--tight" id="an9-topics">
+<div class="an9-wrap">
+<div class="an9-sec-head">
+<div>
+<h2 class="an9-h2">专题企划：<em>品牌</em>与社区共同推进的四个计划</h2>
+<p class="an9-sub">每个专题都有明确的运营周期、投稿入口与推荐位规则，欢迎创作者带着作品来报名。</p>
+</div>
+<a class="an9-btn an9-btn--mint" href="#an9-upload" id="an9-upload-open2">我要投稿报名</a>
+</div>
+<div class="an9-topics">
+<div class="an9-topic">
+<div class="an9-topic-head">
+<h3>冬日声绘 · 同人手书企划</h3>
+<span class="an9-state an9-state--hot">征稿中</span>
+</div>
+<p>以「重逢」为题的手书创作企划，鼓励原创分镜与手绘原画，优秀作品将进入季度剧场推荐位。</p>
+<ul class="an9-topic-list">
+<li>《冬日声绘》第一话 4 分 26 秒</li>
+<li>原画师公开课：12 月 3 日</li>
+<li>截稿日期：2027 年 1 月 15 日</li>
+</ul>
+</div>
+<div class="an9-topic">
+<div class="an9-topic-head">
+<h3>星晷纪行 · 官方二创授权专题</h3>
+<span class="an9-state">持续更新</span>
+</div>
+<p>官方开放角色设定、分镜参考与 BGM 清单，二创作品需标注原作出处，审核通过后进入专题聚合页。</p>
+<ul class="an9-topic-list">
+<li>素材包 v2.3 已上线</li>
+<li>手书、翻唱、配音、MAD 四类赛道</li>
+<li>每周五精选 10 部作品</li>
+</ul>
+</div>
+<div class="an9-topic">
+<div class="an9-topic-head">
+<h3>创作者扶持计划 · 第三期</h3>
+<span class="an9-state an9-state--soon">报名中</span>
+</div>
+<p>面向手书、原创短片与配音方向的创作扶持，包含创作基金、设备借用与官方推荐位。</p>
+<ul class="an9-topic-list">
+<li>单人最高 3 万元创作基金</li>
+<li>剪辑工作坊 6 场线上课</li>
+<li>报名截止：12 月 20 日</li>
+</ul>
+</div>
+<div class="an9-topic">
+<div class="an9-topic-head">
+<h3>星火原创大赛 · 2026 回顾</h3>
+<span class="an9-state">已完结</span>
+</div>
+<p>四大赛道共收到 1860 份投稿，最终 24 部作品入围年度展映，完整名单已在官方网站公布。</p>
+<ul class="an9-topic-list">
+<li>番剧赛道金奖《雾海来信》</li>
+<li>手书赛道金奖《纸上春》</li>
+<li>展映合辑已上线视频社区</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+<!-- S5 创作者矩阵 -->
+<section class="an9-sec" id="an9-makers">
+<div class="an9-wrap">
+<div class="an9-sec-head">
+<div>
+<h2 class="an9-h2">创作者矩阵：<em>9l二次元</em>被这些人撑起来</h2>
+<p class="an9-sub">他们来自动画、手书、配音、考据、音乐等不同方向，共同构成平台的原创内容生态。点击可查看创作者档案。</p>
+</div>
+<span class="an9-tag">认证创作者 4800+</span>
+</div>
+<div class="an9-makers">
+<article class="an9-maker">
+<div class="an9-maker-ava" style="background:linear-gradient(140deg,#ffd166,#ff5fa2)">浮</div>
+<div>
+<h3>浮光动画工作室</h3>
+<div class="an9-maker-field">原创番剧 · 分镜演出</div>
+<div class="an9-maker-nums"><span>作品 86</span><span>粉丝 42.3 万</span></div>
+<p>由四位前动画公司分镜师组成的独立团队，擅长用克制的镜头语言讲情感转折。代表作《星晷纪行》，坚持每话公开分镜手稿，是站内动画学习者的重要参考。</p>
+<button class="an9-maker-more" type="button" data-an9-maker="浮光动画工作室|原创番剧 · 分镜演出|86|42.3万">查看创作者档案 →</button>
+</div>
+</article>
+<article class="an9-maker">
+<div class="an9-maker-ava" style="background:linear-gradient(140deg,#58f0d8,#8b7bff)">纸</div>
+<div>
+<h3>纸上星河</h3>
+<div class="an9-maker-field">同人手书 · 原画</div>
+<div class="an9-maker-nums"><span>作品 34</span><span>粉丝 18.7 万</span></div>
+<p>手绘原画创作者，习惯用胶片色调与留白叙事。七个月完成《冬日声绘》第一话，作品被多家美术院校用作分镜教学案例，也在站内开设了手书入门课。</p>
+<button class="an9-maker-more" type="button" data-an9-maker="纸上星河|同人手书 · 原画|34|18.7万">查看创作者档案 →</button>
+</div>
+</article>
+<article class="an9-maker">
+<div class="an9-maker-ava" style="background:linear-gradient(140deg,#ff8fc0,#ffd166)">林</div>
+<div>
+<h3>林见夏</h3>
+<div class="an9-maker-field">配音 · 声优访谈</div>
+<div class="an9-maker-nums"><span>作品 52</span><span>粉丝 26.1 万</span></div>
+<p>职业配音演员，声线跨度大，擅长在细微气息里完成情绪表达。除作品外，长期在 9l二次元 分享录音棚实战经验，她的「声线切换」系列是站内热门教程。</p>
+<button class="an9-maker-more" type="button" data-an9-maker="林见夏|配音 · 声优访谈|52|26.1万">查看创作者档案 →</button>
+</div>
+</article>
+<article class="an9-maker">
+<div class="an9-maker-ava" style="background:linear-gradient(140deg,#8b7bff,#58f0d8)">未</div>
+<div>
+<h3>未名社</h3>
+<div class="an9-maker-field">独立动画 · 幕后记录</div>
+<div class="an9-maker-nums"><span>作品 21</span><span>粉丝 13.5 万</span></div>
+<p>六人独立动画团队，用 18 个月完成 24 分钟短片。习惯把制作流程完整公开，从预算表到踩坑清单都不藏私，被观众称为「最诚实的创作记录者」。</p>
+<button class="an9-maker-more" type="button" data-an9-maker="未名社|独立动画 · 幕后记录|21|13.5万">查看创作者档案 →</button>
+</div>
+</article>
+<article class="an9-maker">
+<div class="an9-maker-ava" style="background:linear-gradient(140deg,#ffd166,#58f0d8)">夜</div>
+<div>
+<h3>夜航考据组</h3>
+<div class="an9-maker-field">考据 · 知识科普</div>
+<div class="an9-maker-nums"><span>作品 63</span><span>粉丝 20.9 万</span></div>
+<p>由三位历史与天文爱好者组成的考据团队，专注拆解动画设定背后的真实原型。他们的视频常附参考资料与高清图源，是站内「看完正片再看考据」的代表账号。</p>
+<button class="an9-maker-more" type="button" data-an9-maker="夜航考据组|考据 · 知识科普|63|20.9万">查看创作者档案 →</button>
+</div>
+</article>
+<article class="an9-maker">
+<div class="an9-maker-ava" style="background:linear-gradient(140deg,#ff5fa2,#8b7bff)">夏</div>
+<div>
+<h3>夏末电台</h3>
+<div class="an9-maker-field">音乐 · 翻唱与原创</div>
+<div class="an9-maker-nums"><span>作品 47</span><span>粉丝 15.2 万</span></div>
+<p>以翻唱与原创动画主题曲为主的音乐创作者，擅长把二次元旋律改编成民谣与室内乐版本。她的「深夜电台」系列每周更新，是社区里最治愈的声音之一。</p>
+<button class="an9-maker-more" type="button" data-an9-maker="夏末电台|音乐 · 翻唱与原创|47|15.2万">查看创作者档案 →</button>
+</div>
+</article>
+</div>
+</div>
+</section>
+
+<!-- S6 用户评价 + 榜单 -->
+<section class="an9-sec" id="an9-comments">
+<div class="an9-wrap">
+<div class="an9-sec-head">
+<div>
+<h2 class="an9-h2">用户口碑：<em>真实</em>评价里的 9l二次元</h2>
+<p class="an9-sub">以下评价来自社区用户与创作者，覆盖内容质量、播放体验、创作支持与社区氛围四个维度。</p>
+</div>
+</div>
+<div class="an9-rating">
+<div>
+<div class="an9-rating-big">4.8<small> / 5.0</small></div>
+<div class="an9-stars">★★★★★</div>
+</div>
+<div class="an9-rating-item">内容质量 <b>4.9</b></div>
+<div class="an9-rating-item">播放体验 <b>4.7</b></div>
+<div class="an9-rating-item">创作支持 <b>4.8</b></div>
+<div class="an9-rating-item">社区氛围 <b>4.8</b></div>
+<div class="an9-rating-item">累计评价 <b>1.2 万+</b></div>
+</div>
+<div class="an9-comments">
+<div class="an9-comment">
+<p>第一次在 9l二次元 追完一部原创番，最打动我的是制作组每话都放分镜手稿。作为动画专业学生，这比任何教程都实用。</p>
+<div class="an9-comment-foot"><span>— 动画系学生 · 阿澜</span><span class="an9-stars">★★★★★</span></div>
+</div>
+<div class="an9-comment">
+<p>手书区的审核很严格，需要标注原作出处，一开始觉得麻烦，后来发现正是这样才让二创环境干净很多。愿意继续在这里投稿。</p>
+<div class="an9-comment-foot"><span>— 手书创作者 · 纸上星河</span><span class="an9-stars">★★★★★</span></div>
+</div>
+<div class="an9-comment">
+<p>播放器很稳，弱网也不会一直转圈，弹幕密度可以调，这点比很多大站都贴心。希望以后能加个按角色筛选弹幕的功能。</p>
+<div class="an9-comment-foot"><span>— 普通用户 · 七号星尘</span><span class="an9-stars">★★★★☆</span></div>
+</div>
+<div class="an9-comment">
+<p>参加过第二期创作者扶持计划，拿到了设备借用和一次首页推荐。数据涨得不算夸张，但来的粉丝很真实，会认真留言。</p>
+<div class="an9-comment-foot"><span>— 独立动画作者 · 未名社</span><span class="an9-stars">★★★★★</span></div>
+</div>
+<div class="an9-comment">
+<p>社恐星人表示评论区氛围真的好，讨论剧情会主动折叠剧透，吵架也少。就是希望专题页能再多一点，现在更新频率有点慢。</p>
+<div class="an9-comment-foot"><span>— 潜水用户 · 一只团子</span><span class="an9-stars">★★★★☆</span></div>
+</div>
+<div class="an9-comment">
+<p>考据区的夜航组是我的快乐源泉，看完正片再来看他们拆设定，感觉一部番能看两遍。参考资料还附了下载，很良心。</p>
+<div class="an9-comment-foot"><span>— 考据爱好者 · 洛河</span><span class="an9-stars">★★★★★</span></div>
+</div>
+<div class="an9-comment">
+<p>作为家长，比较看重未成年人保护模式，9l二次元 的分级和剧透折叠做得比较到位，孩子看动画我也放心一些。</p>
+<div class="an9-comment-foot"><span>— 家长用户 · 陈女士</span><span class="an9-stars">★★★★☆</span></div>
+</div>
+<div class="an9-comment">
+<p>翻唱区的音质比预期好很多，上传后会提示响度标准，对新人很友好。希望官方能多办一些线上合唱企划。</p>
+<div class="an9-comment-foot"><span>— 音乐创作者 · 夏末电台</span><span class="an9-stars">★★★★★</span></div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- S7 辅助区：企业动态 + FAQ + 合作 -->
+<section class="an9-sec an9-sec--tight" id="an9-news">
+<div class="an9-wrap">
+<div class="an9-sec-head">
+<div>
+<h2 class="an9-h2">企业动态与帮助：<em>官方发布</em>与常见问题</h2>
+<p class="an9-sub">品牌资讯、内容更新与投稿常见问题集中在这里，方便创作者与企业合作方快速了解平台。</p>
+</div>
+</div>
+<div class="an9-aux-grid">
+<div class="an9-panel">
+<h3>企业动态 · 官方发布</h3>
+<ul class="an9-news">
+<li><time>11-22</time><span>原创番剧《星晷纪行》第 9 话上线，官方分镜手稿同步开源。</span></li>
+<li><time>11-18</time><span>「冬日声绘」同人手书企划开启征稿，截稿日期 2027 年 1 月 15 日。</span></li>
+<li><time>11-12</time><span>创作者扶持计划第三期开放报名，新增配音赛道与设备借用名额。</span></li>
+<li><time>11-05</time><span>官方网站播放器更新至 3.4 版本，优化弱网切换与弹幕密度记忆。</span></li>
+<li><time>10-28</time><span>9l二次元 与三家声优事务所达成内容合作，将上线系列访谈专栏。</span></li>
+</ul>
+</div>
+<div class="an9-panel an9-faq" id="an9-faq">
+<h3>常见问题 · 帮助中心</h3>
+<details open>
+<summary>如何向 9l二次元 投稿原创作品？</summary>
+<p>注册并完成创作者认证后，在「投稿」入口选择作品类型，填写标题、简介、标签与授权说明，上传成片或分镜文件即可。原创动画需提交制作说明，同人作品需标注原作出处。</p>
+</details>
+<details>
+<summary>平台对二创授权的规则是什么？</summary>
+<p>官方番剧上线后会同步开放二创授权，创作者可使用专题内的素材包。需在简介中标注原作名称与素材包版本，禁止商用与二次转授权。具体细则可在每个专题页查看。</p>
+</details>
+<details>
+<summary>创作基金如何申请，审核周期多久？</summary>
+<p>在扶持计划页面提交作品集与项目计划书，审核分为初筛与面试两轮，周期约 15 个工作日。入选后基金分两期发放，首期在签约后 7 个工作日内到账。</p>
+</details>
+<details>
+<summary>视频清晰度与播放卡顿问题怎么反馈？</summary>
+<p>可在播放页右下角点击「反馈」提交具体时间点与网络环境，技术团队会在 3 个工作日内回复。建议优先检查网络带宽，或手动切换至 720P 流畅模式。</p>
+</details>
+<details>
+<summary>未成年人保护模式包含哪些限制？</summary>
+<p>开启后，平台将限制深夜观看时长、折叠含剧透与争议标签的内容，并关闭部分互动功能。家长可通过绑定账号查看观看报告。</p>
+</details>
+<details>
+<summary>企业或品牌如何与 9l二次元 合作？</summary>
+<p>可通过页脚的联系方式提交合作需求，说明合作形式、预算区间与目标受众。内容合作需符合社区调性，平台保留对植入方式的审核权。</p>
+</details>
+</div>
+</div>
+<div class="an9-panel" style="margin-top:26px">
+<h3>合作品牌与伙伴</h3>
+<p style="font-size:13.4px;color:#b3aad2;margin-bottom:6px">9l二次元 与版权方、出版社、声优事务所及高校动画专业保持长期合作，共同推动原创内容生态。</p>
+<div class="an9-partners">
+<div class="an9-partner">浮光文化<span>版权合作</span></div>
+<div class="an9-partner">青川出版社<span>漫画出版</span></div>
+<div class="an9-partner">回声声优社<span>配音合作</span></div>
+<div class="an9-partner">南岭动画学院<span>人才培养</span></div>
+<div class="an9-partner">星野音乐<span>原创配乐</span></div>
+<div class="an9-partner">未名社<span>内容共创</span></div>
+</div>
+</div>
+</div>
+</section>
+
+</main>
+
+<!-- S8 页脚 -->
+<footer class="an9-foot">
+<div class="an9-wrap">
+<div class="an9-foot-grid">
+<div class="an9-foot-brand">
+<div class="an9-logo"><span class="an9-logo-mark">9L</span><span>9l二次元<small>ANIME STUDIO</small></span></div>
+<p>9l二次元官方网站，专注原创番剧、同人手书、声优访谈与创作幕后的二次元视频品牌社区。坚持正版、高清、专业，持续运营，与创作者共同成长。</p>
+</div>
+<div>
+<h4>内容频道</h4>
+<ul>
+<li><a href="#an9-focus">焦点内容</a></li>
+<li><a href="#an9-stream">视频社区</a></li>
+<li><a href="#an9-topics">专题企划</a></li>
+<li><a href="#an9-makers">创作者矩阵</a></li>
+</ul>
+</div>
+<div>
+<h4>关于我们</h4>
+<ul>
+<li><a href="#an9-parse">品牌与关键词解析</a></li>
+<li><a href="#an9-news">企业动态</a></li>
+<li><a href="#an9-comments">用户口碑</a></li>
+<li><a href="#an9-faq">帮助中心</a></li>
+</ul>
+</div>
+<div>
+<h4>联系与合作</h4>
+<ul>
+<li>投稿与合作：join@9lanime.example</li>
+<li>版权事务：rights@9lanime.example</li>
+<li>商务合作：bd@9lanime.example</li>
+<li>工作时间：周一至周五 10:00–19:00</li>
+</ul>
+</div>
+</div>
+<div class="an9-foot-bot">
+<span>© 2026 9l二次元 官方网站 · 版权所有 · 持续运营中</span>
+<span>内容均为原创或已获授权 · 备案号：影字（2026）第 0912 号</span>
+</div>
+</div>
+</footer>
+
+<button class="an9-top-btn" id="an9-top-btn" type="button" aria-label="回到顶部">↑</button>
+
+<!-- 弹窗：投稿 -->
+<div class="an9-modal" id="an9-upload-modal" role="dialog" aria-modal="true" aria-labelledby="an9-upload-title">
+<div class="an9-modal-box">
+<h3 id="an9-upload-title">投稿 / 报名入口<button class="an9-modal-close" type="button" data-an9-close aria-label="关闭">×</button></h3>
+<p>填写基本信息后，编辑团队会在 5 个工作日内联系你。原创作品请附分镜或制作说明，二创作品请注明原作与素材包版本。</p>
+<div class="an9-field"><label for="an9-up-name">创作者昵称</label><input id="an9-up-name" type="text" placeholder="例如：纸上星河"></div>
+<div class="an9-field"><label for="an9-up-type">作品类型</label>
+<select id="an9-up-type">
+<option>原创番剧</option><option>同人手书</option><option>翻唱 / 音乐</option><option>配音 / 声优</option><option>考据 / 知识科普</option><option>创作幕后</option>
+</select>
+</div>
+<div class="an9-field"><label for="an9-up-desc">作品简介</label><textarea id="an9-up-desc" placeholder="简单介绍作品内容、创作周期与授权情况"></textarea></div>
+<button class="an9-btn an9-btn--main" type="button" id="an9-upload-submit">提交投稿意向</button>
+</div>
+</div>
+
+<!-- 弹窗：创作者档案 -->
+<div class="an9-modal" id="an9-maker-modal" role="dialog" aria-modal="true" aria-labelledby="an9-maker-title">
+<div class="an9-modal-box">
+<h3 id="an9-maker-title">创作者档案<button class="an9-modal-close" type="button" data-an9-close aria-label="关闭">×</button></h3>
+<div id="an9-maker-body"></div>
+</div>
+</div>
+
+<!-- Toast -->
+<div class="an9-toast" id="an9-toast" role="status" aria-live="polite"></div>
+
+<script>
+(function(){
+  "use strict";
+
+  var toastEl = document.getElementById("an9-toast");
+  var toastTimer = null;
+  function toast(msg){
+    toastEl.textContent = msg;
+    toastEl.classList.add("is-on");
+    if(toastTimer) clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toastEl.classList.remove("is-on"); }, 2200);
+  }
+
+  /* 移动端导航 */
+  var burger = document.getElementById("an9-burger");
+  var mnav = document.getElementById("an9-mnav");
+  burger.addEventListener("click", function(){
+    var on = mnav.classList.toggle("is-on");
+    burger.classList.toggle("is-on", on);
+    burger.setAttribute("aria-expanded", on ? "true" : "false");
+  });
+  Array.prototype.forEach.call(mnav.querySelectorAll("a"), function(a){
+    a.addEventListener("click", function(){
+      mnav.classList.remove("is-on");
+      burger.classList.remove("is-on");
+      burger.setAttribute("aria-expanded","false");
+    });
+  });
+
+  /* 搜索提示与前端反馈 */
+  var input = document.getElementById("an9-search-input");
+  var tip = document.getElementById("an9-search-tip");
+  var pool = [
+    "星晷纪行 第9话 分镜手稿",
+    "冬日声绘 手书 原画",
+    "林见夏 声优访谈 录音花絮",
+    "未名社 独立动画 幕后",
+    "夜航考据组 星盘 原型",
+    "夏末电台 深夜电台 翻唱"
+  ];
+  function doSearch(){
+    var q = input.value.trim();
+    if(!q){
+      tip.innerHTML = "输入番剧名、角色名、创作者或标签试试，例如 <b>星晷纪行</b>";
+      tip.classList.add("is-on");
+      return;
+    }
+    var hit = pool.filter(function(t){ return t.toLowerCase().indexOf(q.toLowerCase()) > -1; });
+    if(hit.length){
+      tip.innerHTML = "找到 " + hit.length + " 条相关内容：" + hit.map(function(t){ return "<b>" + t + "</b>"; }).join("、");
+    }else{
+      tip.innerHTML = "暂未匹配到「" + q + "」，试试 <b>星晷纪行</b> 或 <b>手书</b>";
+    }
+    tip.classList.add("is-on");
+  }
+  document.getElementById("an9-search-btn").addEventListener("click", doSearch);
+  input.addEventListener("keydown", function(e){ if(e.key === "Enter"){ e.preventDefault(); doSearch(); } });
+  input.addEventListener("blur", function(){ setTimeout(function(){ tip.classList.remove("is-on"); }, 220); });
+  input.addEventListener("focus", function(){ if(input.value.trim()) doSearch(); });
+
+  /* 点赞 / 收藏 */
+  Array.prototype.forEach.call(document.querySelectorAll("[data-an9-like]"), function(btn){
+    btn.addEventListener("click", function(){
+      var span = btn.querySelector("span");
+      var raw = span.textContent.replace(/[^\d.]/g,"");
+      var liked = btn.classList.toggle("is-liked");
+      if(liked) toast("已点赞，感谢支持原创内容");
+      // 数字变化 +1/-1（保留“万”单位）
+      if(/万/.test(raw)){
+        var v = parseFloat(raw) || 0;
+        v = v + (liked ? 0.1 : -0.1);
+        span.textContent = v.toFixed(1) + "万";
+      }else{
+        var n = parseInt(raw,10) || 0;
+        span.textContent = (n + (liked ? 1 : -1)) + "";
+      }
+    });
+  });
+  Array.prototype.forEach.call(document.querySelectorAll("[data-an9-save]"), function(btn){
+    btn.addEventListener("click", function(){
+      var on = btn.classList.toggle("is-saved");
+      btn.textContent = on ? "★ 已收藏" : "☆ 收藏";
+      toast(on ? "已加入收藏夹" : "已取消收藏");
+    });
+  });
+
+  /* 复制链接 */
+  Array.prototype.forEach.call(document.querySelectorAll("[data-an9-share]"), function(btn){
+    btn.addEventListener("click", function(){
+      var item = btn.closest(".an9-stream-item");
+      var title = item ? item.querySelector("h3").textContent.trim() : "9l二次元";
+      var text = "分享《" + title + "》— 9l二次元官方网站";
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(text).then(function(){ toast("分享文案已复制"); }, function(){ toast("复制失败，请手动选择文本"); });
+      }else{
+        toast("分享《" + title.slice(0,12) + "…》");
+      }
+    });
+  });
+
+  /* 创作者档案弹窗 */
+  var makerModal = document.getElementById("an9-maker-modal");
+  var makerBody = document.getElementById("an9-maker-body");
+  Array.prototype.forEach.call(document.querySelectorAll("[data-an9-maker]"), function(btn){
+    btn.addEventListener("click", function(){
+      var p = btn.getAttribute("data-an9-maker").split("|");
+      makerBody.innerHTML =
+        '<p style="color:#fff;font-size:17px;font-weight:700">' + p[0] + '</p>' +
+        '<p>擅长领域：' + p[1] + '</p>' +
+        '<p>作品数：' + p[2] + ' 部　粉丝数：' + p[3] + '</p>' +
+        '<p>该创作者已在 9l二次元 发布多部原创或授权作品，通过平台认证审核。擅长以稳定的更新节奏与清晰的创作方法论积累口碑，是社区内容生态的重要组成部分。</p>' +
+        '<p><button class="an9-btn an9-btn--main" type="button" data-an9-close>知道了</button></p>';
+      makerModal.classList.add("is-on");
+    });
+  });
+
+  /* 投稿弹窗 */
+  var upModal = document.getElementById("an9-upload-modal");
+  function openUpload(){ upModal.classList.add("is-on"); }
+  document.getElementById("an9-upload-open").addEventListener("click", openUpload);
+  var up2 = document.getElementById("an9-upload-open2");
+  if(up2) up2.addEventListener("click", function(e){ e.preventDefault(); openUpload(); });
+  document.getElementById("an9-upload-submit").addEventListener("click", function(){
+    var name = document.getElementById("an9-up-name").value.trim();
+    if(!name){ toast("请先填写创作者昵称"); return; }
+    upModal.classList.remove("is-on");
+    toast("投稿意向已提交，编辑团队将在 5 个工作日内联系你");
+  });
+
+  /* 关闭弹窗 */
+  Array.prototype.forEach.call(document.querySelectorAll("[data-an9-close]"), function(el){
+    el.addEventListener("click", function(){
+      var m = el.closest(".an9-modal");
+      if(m) m.classList.remove("is-on");
+    });
+  });
+  [makerModal, upModal].forEach(function(m){
+    m.addEventListener("click", function(e){ if(e.target === m) m.classList.remove("is-on"); });
+  });
+  document.addEventListener("keydown", function(e){
+    if(e.key === "Escape"){
+      document.querySelectorAll(".an9-modal.is-on").forEach(function(m){ m.classList.remove("is-on"); });
+      tip.classList.remove("is-on");
+    }
+  });
+
+  /* 回到顶部 */
+  var topBtn = document.getElementById("an9-top-btn");
+  window.addEventListener("scroll", function(){
+    topBtn.classList.toggle("is-on", window.scrollY > 620);
+  }, { passive:true });
+  topBtn.addEventListener("click", function(){ window.scrollTo({ top:0, behavior:"smooth" }); });
+})();
+</script>
+</body>
+  </html>
